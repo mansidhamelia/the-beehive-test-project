@@ -1,18 +1,7 @@
 
-/* 
-.hexagon-inner {
-  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-}
-.hexagon {
-  width: 6rem; 
-  height: 6rem; 
-  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 /* Hexagon styling */
 .hexagon-grid {
@@ -36,9 +25,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Offset for staggered rows */
 .hexagon:nth-child(odd) {
-  margin-top: 28px; /* Half height to create the staggered effect */
+  margin-top: 28px;
 }
 
 .hexagon:hover {
@@ -49,6 +37,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 800px; /* Set max width to contain hexagons */
-  margin: 0 auto; /* Center horizontally */
+  max-width: 800px; 
+  margin: 0 auto; 
 }
