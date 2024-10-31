@@ -1,15 +1,54 @@
 
-
+/* 
 .hexagon-inner {
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
 }
 .hexagon {
-  width: 6rem; /* You can adjust as needed */
-  height: 6rem; /* You can adjust as needed */
+  width: 6rem; 
+  height: 6rem; 
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-}
+} */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* Hexagon styling */
+.hexagon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.hexagon {
+  width: 100px;
+  height: 57.74px;
+  background-color: #00aaff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  margin: 2px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Offset for staggered rows */
+.hexagon:nth-child(odd) {
+  margin-top: 28px; /* Half height to create the staggered effect */
+}
+
+.hexagon:hover {
+  transform: rotate(90deg) scale(1.05);
+}
+
+.beehive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px; /* Set max width to contain hexagons */
+  margin: 0 auto; /* Center horizontally */
+}
